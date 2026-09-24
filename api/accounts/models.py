@@ -30,7 +30,7 @@ class UserManager(BaseUserManager):
 class User(AbstractUser):
     username = None
     phone = PhoneNumberField(unique=True)
-
+    # location = models.ForeignKey("core.Location", on_delete=models.SET_NULL, null=True)
     objects = UserManager()
 
     USERNAME_FIELD = "phone"

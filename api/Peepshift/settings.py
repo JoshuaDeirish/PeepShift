@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     "accounts",
     "core",
     "checklists",
+    "waste",
+    "temperatures",
     "phonenumber_field",
 ]
 

@@ -7,8 +7,8 @@ from .models import User
 class CustomUserAdmin(UserAdmin):
     model = User
 
-    list_display = ("phone", "first_name", "last_name", "is_staff", "is_active")
-    list_filter = ("is_staff", "is_superuser", "is_active", "groups")
+    list_display = ("phone", "first_name", "last_name", "role", "is_staff", "is_active")
+    list_filter = ("is_staff", "is_superuser", "is_active", "groups", "role")
     ordering = ("phone",)
     search_fields = ("phone", "first_name", "last_name")
 
@@ -23,6 +23,8 @@ class CustomUserAdmin(UserAdmin):
                     "is_staff",
                     "is_superuser",
                     "groups",
+                    "role",
+                    "must_change_pin",
                     "user_permissions",
                 ),
             },

@@ -41,7 +41,6 @@ class User(AbstractUser):
     role = models.CharField(
         max_length=32, choices=UserRole.choices, default=UserRole.STAFF
     )
-    # location = models.ForeignKey("core.Location", on_delete=models.SET_NULL, null=True)
     objects = UserManager()
 
     USERNAME_FIELD = "phone"

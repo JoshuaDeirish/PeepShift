@@ -25,6 +25,7 @@ class Location(models.Model):
     timezone = models.CharField(max_length=64, default="America/Toronto")
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    business_day_cutoff_hour = models.PositiveSmallIntegerField(default=4)
 
     class Meta:
         ordering = ("name",)
